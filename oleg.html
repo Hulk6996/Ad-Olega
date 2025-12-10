@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>🔞 ДЕТЕКТИВНЫЙ АД ОЛЕГА</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", "Arial Black", Gadget, sans-serif;
+      }
+      :root {
+        --dark-bg: #0d001c;
+        --blood: #c00025;
+        --neon-red: #ff0a66;
+        --toxic-green: #00ff99;
+        --glow: rgba(255, 10, 102, 0.8);
+        --text: #ffffff;
+        --text-dim: #e0e0e0;
+      }
+      body {
+        background: radial-gradient(
+            circle at 15% 25%,
+            rgba(192, 0, 37, 0.2) 0%,
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 85% 75%,
+            rgba(0, 255, 153, 0.15) 0%,
+            transparent 30%
+          ),
+          linear-gradient(145deg, var(--dark-bg), #000000);
+        color: var(--text);
+        min-height: 100vh;
+        padding: clamp(10px, 3vw, 20px);
+        position: relative;
+        overflow-x: hidden;
+        font-size: clamp(14px, 4vw, 18px);
+        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0 L100 100 M100 0 L0 100' stroke='%23c00025' stroke-width='0.6' opacity='0.15'/%3E%3C/svg%3E");
+        z-index: -1;
+      }
+      .container {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: clamp(10px, 2vw, 20px);
+      }
+      header {
+        text-align: center;
+        margin-bottom: clamp(15px, 4vw, 30px);
+        position: relative;
+        padding: clamp(15px, 3vw, 20px);
+        border: clamp(3px, 1vw, 4px) solid var(--blood);
+        border-radius: 20px;
+        background: rgba(15, 0, 30, 0.9);
+        box-shadow: 0 0 30px var(--glow);
+        animation: pulseHeader 2.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      }
+      @keyframes pulseHeader {
+        0%,
+        100% {
+          box-shadow: 0 0 25px var(--glow);
+        }
+        50% {
+          box-shadow: 0 0 50px var(--neon-red);
+        }
+      }
+      h1 {
+        font-size: clamp(2rem, 8vw, 3.8rem);
+        margin: 10px 0;
+        background: linear-gradient(
+          to right,
+          var(--neon-red),
+          var(--toxic-green),
+          var(--neon-red)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        letter-spacing: clamp(2px, 1.5vw, 4px);
+        text-shadow: 0 0 20px rgba(255, 10, 102, 0.9);
+        position: relative;
+        font-weight: 900;
+        animation: hueRotate 8s linear infinite;
+      }
+      @keyframes hueRotate {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+      h1::after {
+        content: "💀";
+        position: absolute;
+        right: clamp(-30px, -6vw, -50px);
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: clamp(2rem, 6vw, 3rem);
+        animation: float 3.5s infinite ease-in-out;
+        text-shadow: 0 0 15px var(--neon-red);
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(-50%) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-65%) rotate(10deg);
+        }
+      }
+      .subtitle {
+        font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+        color: var(--toxic-green);
+        margin-top: 15px;
+        font-weight: bold;
+        text-shadow: 0 0 12px rgba(0, 255, 153, 0.8);
+        letter-spacing: 1px;
+      }
+      .badge {
+        display: inline-block;
+        background: linear-gradient(45deg, var(--blood), #ff0a66, var(--blood));
+        padding: clamp(10px, 2.5vw, 14px) clamp(20px, 5vw, 35px);
+        border-radius: 50px;
+        margin: clamp(15px, 3vw, 20px) 0;
+        font-weight: 900;
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
+        text-transform: uppercase;
+        letter-spacing: clamp(2px, 1vw, 3px);
+        box-shadow: 0 0 20px var(--glow);
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--text);
+        animation: pulseBadge 4s infinite;
+      }
+      @keyframes pulseBadge {
+        0%,
+        100% {
+          box-shadow: 0 0 20px var(--glow);
+        }
+        50% {
+          box-shadow: 0 0 35px var(--toxic-green);
+        }
+      }
+      .game-container {
+        background: rgba(12, 0, 25, 0.95);
+        border: clamp(4px, 1vw, 5px) solid var(--blood);
+        border-radius: 30px;
+        padding: clamp(15px, 3vw, 30px);
+        margin-bottom: clamp(20px, 3vw, 25px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+        position: relative;
+        overflow: hidden;
+        min-height: clamp(350px, 60vh, 450px);
+        backdrop-filter: blur(12px);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+      .game-container:hover {
+        transform: translateY(-5px);
+      }
+      .game-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: clamp(10px, 1.5vw, 15px);
+        background: linear-gradient(
+          90deg,
+          var(--blood),
+          var(--toxic-green),
+          var(--neon-red),
+          var(--blood)
+        );
+        background-size: 400% 100%;
+        animation: gradientFlow 5s linear infinite;
+      }
+      @keyframes gradientFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 400% 50%;
+        }
+      }
+      .question-text {
+        font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+        line-height: 1.4;
+        margin: clamp(15px, 2.5vw, 25px) 0;
+        text-align: center;
+        min-height: clamp(80px, 12vh, 120px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(10px, 2vw, 15px);
+        background: rgba(8, 0, 20, 0.85);
+        border-radius: 20px;
+        border: clamp(3px, 0.8vw, 4px) solid var(--neon-red);
+        position: relative;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8),
+          0 0 15px rgba(255, 10, 102, 0.4);
+        word-break: break-word;
+        overflow-y: auto;
+        max-height: clamp(100px, 18vh, 150px);
+        transition: all 0.3s ease;
+      }
+      .answers-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(15px, 2.5vw, 25px);
+        margin: clamp(20px, 3vw, 30px) 0;
+      }
+      .answer-btn {
+        background: linear-gradient(45deg, #2d0048, #52006b);
+        border: clamp(3px, 0.8vw, 4px) solid var(--blood);
+        color: var(--text);
+        padding: clamp(12px, 2.5vw, 18px);
+        font-size: clamp(1.1rem, 2.8vw, 1.4rem);
+        border-radius: 18px;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        word-break: break-word;
+        transform: perspective(1px) translateZ(0);
+      }
+      .answer-btn:hover {
+        background: linear-gradient(45deg, var(--blood), #ff0a66);
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 12px 25px rgba(255, 10, 102, 0.6);
+        border-color: var(--text);
+        z-index: 2;
+      }
+      .captcha-section {
+        background: rgba(20, 0, 35, 0.97);
+        border: clamp(4px, 1vw, 5px) dashed var(--neon-red);
+        border-radius: 30px;
+        padding: clamp(25px, 4vw, 35px);
+        margin: clamp(20px, 3vw, 25px) 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.9),
+          0 0 30px rgba(255, 10, 102, 0.5);
+      }
+      .captcha-title {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+        margin-bottom: clamp(15px, 2.5vw, 20px);
+        color: var(--neon-red);
+        text-shadow: 0 0 18px rgba(255, 10, 102, 0.9);
+        font-weight: 900;
+        letter-spacing: 2px;
+        animation: glowText 2s infinite alternate;
+      }
+      @keyframes glowText {
+        from {
+          text-shadow: 0 0 15px rgba(255, 10, 102, 0.8);
+        }
+        to {
+          text-shadow: 0 0 30px rgba(255, 10, 102, 1);
+        }
+      }
+      .captcha-instructions {
+        font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+        margin-bottom: clamp(15px, 2.5vw, 20px);
+        color: var(--toxic-green);
+        font-weight: 900;
+        letter-spacing: 1px;
+      }
+      .captcha-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(15px, 2.5vw, 25px);
+        margin: clamp(15px, 2.5vw, 20px) 0;
+        flex-wrap: wrap;
+      }
+      .captcha-puzzle {
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+        font-weight: 900;
+        color: var(--neon-red);
+        text-shadow: 0 0 15px rgba(255, 10, 102, 0.8);
+        min-width: clamp(80px, 20vw, 120px);
+        text-align: center;
+        background: rgba(0, 0, 0, 0.4);
+        padding: clamp(8px, 1.5vw, 12px);
+        border-radius: 12px;
+        border: 2px solid var(--blood);
+      }
+      .captcha-input {
+        width: clamp(120px, 30vw, 180px);
+        padding: clamp(10px, 2vw, 15px);
+        font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+        border: 3px solid var(--blood);
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.85);
+        color: var(--text);
+        text-align: center;
+        font-weight: 800;
+        outline: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        transition: all 0.3s ease;
+      }
+      .captcha-btn {
+        background: linear-gradient(45deg, var(--blood), #ff0a66);
+        color: var(--text);
+        border: none;
+        padding: clamp(10px, 2.5vw, 14px) clamp(20px, 5vw, 30px);
+        font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+        border-radius: 14px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        transform: perspective(1px) translateZ(0);
+      }
+      .captcha-btn:hover {
+        background: linear-gradient(45deg, #ff0a66, var(--blood));
+        transform: scale(1.06) rotate(1deg);
+        box-shadow: 0 0 30px rgba(255, 10, 102, 0.8);
+      }
+      .progress-bar {
+        height: clamp(10px, 1vw, 14px);
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        margin: clamp(15px, 2.5vw, 20px) 0;
+        overflow: hidden;
+        border: 2px solid var(--text-dim);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      }
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--blood),
+          var(--toxic-green),
+          var(--neon-red)
+        );
+        width: 0%;
+        transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 0 15px var(--glow);
+        border-radius: 8px;
+      }
+      .voice-btn {
+        width: clamp(50px, 8vw, 70px);
+        height: clamp(50px, 8vw, 70px);
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        top: clamp(10px, 2vw, 20px);
+        right: clamp(10px, 2vw, 20px);
+        position: absolute;
+      }
+      /* 🔥 МОДАЛЬНЫЕ ОКНА */
+      .error-modal,
+      .success-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.93);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.45s cubic-bezier(0.85, 0, 0.15, 1);
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+          env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+      .error-modal.active,
+      .success-modal.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .error-content,
+      .success-content {
+        background: linear-gradient(145deg, #1a002b, #0b0014);
+        border: 3px solid var(--blood);
+        border-radius: 20px;
+        padding: clamp(16px, 4vw, 24px);
+        width: 92%;
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+        transform: scale(0.75);
+        transition: transform 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+        box-shadow: 0 0 30px rgba(192, 0, 37, 0.8);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .success-content {
+        background: linear-gradient(145deg, #001a00, #002a00);
+        border-color: var(--toxic-green);
+        box-shadow: 0 0 30px rgba(0, 255, 153, 0.7);
+      }
+      .error-modal.active .error-content,
+      .success-modal.active .success-content {
+        transform: scale(1);
+      }
+      .error-title,
+      .success-title {
+        font-size: clamp(1.5rem, 4.2vw, 1.9rem);
+        margin-bottom: clamp(12px, 2.5vw, 16px);
+        font-weight: 900;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        text-shadow: 0 0 12px rgba(255, 10, 102, 0.9);
+        color: var(--neon-red);
+      }
+      .success-title {
+        color: var(--toxic-green);
+        text-shadow: 0 0 12px rgba(0, 255, 153, 0.8);
+      }
+      .error-message,
+      .success-message {
+        font-size: clamp(1.1rem, 3.4vw, 1.4rem);
+        line-height: 1.4;
+        margin-bottom: clamp(16px, 3.2vw, 22px);
+        color: var(--text-dim);
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .error-btn,
+      .success-btn {
+        background: linear-gradient(45deg, var(--blood), #ff0a66);
+        color: white;
+        border: none;
+        padding: clamp(10px, 3vw, 14px) clamp(22px, 5vw, 30px);
+        font-size: clamp(1.05rem, 3.2vw, 1.35rem);
+        border-radius: 14px;
+        cursor: pointer;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all 0.35s ease;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.7);
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+      .success-btn {
+        background: linear-gradient(45deg, var(--toxic-green), #00cc66);
+      }
+      .error-btn:hover {
+        background: linear-gradient(45deg, #ff0a66, var(--blood));
+        transform: scale(1.08) rotate(1deg);
+        box-shadow: 0 0 28px rgba(255, 10, 102, 0.9);
+      }
+      .success-btn:hover {
+        background: linear-gradient(45deg, #00ff99, var(--toxic-green));
+        transform: scale(1.08) rotate(1deg);
+        box-shadow: 0 0 28px rgba(0, 255, 153, 0.85);
+      }
+      /* 💀 КОНФИРМАЦИОННЫЙ ЭКРАН */
+      .confirmation-container {
+        text-align: center;
+        padding: clamp(24px, 4vw, 40px);
+        margin: clamp(15px, 2.5vw, 20px) 0;
+        background: rgba(25, 0, 45, 0.97);
+        border-radius: 28px;
+        border: 4px solid var(--blood);
+        min-height: clamp(320px, 50vh, 380px);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 50px rgba(192, 0, 37, 0.8);
+        position: relative;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .confirmation-text {
+        font-size: clamp(1.6rem, 4.8vw, 2.2rem);
+        min-height: clamp(50px, 8vh, 80px);
+        margin-bottom: clamp(20px, 3.2vw, 28px);
+        line-height: 1.35;
+        color: var(--toxic-green);
+        text-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
+      }
+      .confirmation-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(20px, 4vw, 30px);
+        margin-top: clamp(25px, 4vw, 35px);
+        position: relative;
+        flex-wrap: wrap;
+        /* 🔥 Добавлено для позиционирования кнопок */
+        width: 100%;
+        height: 100%;
+      }
+      .yes-btn,
+      .no-btn {
+        min-width: clamp(100px, 22vw, 140px);
+        padding: clamp(10px, 2.2vw, 14px) clamp(18px, 4.5vw, 28px);
+        font-size: clamp(1.1rem, 3.2vw, 1.4rem);
+        border: 3px solid var(--text);
+        border-radius: 16px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+      .yes-btn {
+        background: linear-gradient(45deg, var(--blood), #ff0a66);
+      }
+      .no-btn {
+        background: linear-gradient(45deg, #0c4d0c, #00ff99);
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .yes-btn:hover {
+        background: linear-gradient(45deg, #ff0a66, var(--blood));
+        transform: scale(1.08) rotate(1deg);
+        box-shadow: 0 0 30px rgba(255, 10, 102, 1);
+      }
+      .no-btn:hover {
+        background: linear-gradient(45deg, #00ff99, #0c4d0c);
+        transform: scale(1.08) rotate(1deg);
+        box-shadow: 0 0 30px rgba(0, 255, 153, 1);
+      }
+      .skull-icon {
+        font-size: clamp(5rem, 8vw, 7rem);
+        margin: clamp(15px, 2vw, 20px) 0;
+        color: var(--neon-red);
+        text-shadow: 0 0 30px rgba(255, 10, 102, 0.9);
+        animation: pulseIcon 2.8s infinite;
+      }
+      @keyframes pulseIcon {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+      /* 🎉 ФИНАЛЬНОЕ ПОЗДРАВЛЕНИЕ — ПОЛНОСТЬЮ ПО ЦЕНТРУ */
+      .final-message {
+        text-align: center;
+        padding: clamp(25px, 4vw, 35px);
+        background: rgba(0, 25, 15, 0.97);
+        border-radius: 28px;
+        border: 4px solid var(--toxic-green);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 40px rgba(0, 255, 153, 0.6);
+        animation: finalGow 3s infinite alternate;
+        max-width: 92%;
+        margin: auto;
+        font-size: clamp(1.1rem, 3.3vw, 1.5rem);
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+      @keyframes finalGow {
+        0% {
+          box-shadow: 0 0 30px rgba(0, 255, 153, 0.5);
+        }
+        100% {
+          box-shadow: 0 0 50px rgba(0, 255, 153, 0.8);
+        }
+      }
+      .final-message h2 {
+        font-size: clamp(1.8rem, 5.2vw, 2.6rem);
+        margin-bottom: clamp(12px, 2.5vw, 16px);
+      }
+      .final-message p {
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        line-height: 1.4;
+        margin: clamp(6px, 1.5vw, 8px) 0;
+      }
+      .hidden {
+        display: none !important;
+      }
+      .audio-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--neon-red),
+          var(--toxic-green),
+          transparent
+        );
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 1.3s linear;
+      }
+      .typing {
+        overflow: hidden;
+        border-right: 5px solid var(--neon-red);
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 2.5px;
+        animation: typing 5.5s steps(70, end),
+          blink-caret 0.9s step-end infinite;
+        line-height: 1.5;
+        font-weight: 800;
+        color: var(--toxic-green);
+        text-shadow: 0 0 12px rgba(0, 255, 153, 0.7);
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: var(--neon-red);
+        }
+      }
+      footer {
+        text-align: center;
+        margin-top: clamp(30px, 4vw, 40px);
+        color: var(--text-dim);
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        letter-spacing: 1px;
+      }
+      @media (max-width: 380px) {
+        .confirmation-container {
+          padding: 22px;
+          min-height: 300px;
+        }
+        .final-message {
+          padding: 18px;
+          font-size: 1.1rem;
+        }
+        .final-message h2 {
+          font-size: 1.7rem;
+        }
+        .final-message p {
+          font-size: 1rem;
+        }
+      }
+      .shake {
+        animation: shake 0.8s;
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0) rotate(0deg);
+        }
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+          transform: translateX(-15px) rotate(-4deg);
+        }
+        20%,
+        40%,
+        60%,
+        80% {
+          transform: translateX(15px) rotate(4deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blood-splatter" id="bloodSplatter"></div>
+    <div class="container">
+      <header>
+        <h1>ДЕТЕКТИВНЫЙ АД ОЛЕГА</h1>
+        <div class="subtitle">18+ КВЕСТ ДЛЯ НАСТОЯЩЕГО ОЛЕГА</div>
+        <div class="badge">ДЕТЕКТИВ №666</div>
+      </header>
+      <div class="game-container">
+        <button class="voice-btn" id="voiceBtn">
+          <i class="fas fa-skull"></i>
+        </button>
+        <div class="audio-indicator" id="audioIndicator"></div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="question-text" id="questionText">
+          <span class="typing"
+            >ПРИВЕТ, ОЛЕГ! ТВОИ ПОДАРКИ УКРАЛИ! ПРОЙДИ КАПЧУ, ЧТОБЫ
+            НАЧАТЬ...</span
+          >
+        </div>
+        <div class="answers-container" id="answersContainer"></div>
+        <div class="captcha-section hidden" id="captchaSection">
+          <div class="captcha-title">ДОКАЖИ, ЧТО ТЫ НЕ РОБОТ!</div>
+          <div class="captcha-instructions">РЕШИ ЭТУ ХУЕВУ ЗАДАЧУ:</div>
+          <div class="captcha-content">
+            <div class="captcha-puzzle" id="captchaPuzzle">7 + 5 = ?</div>
+            <input
+              type="text"
+              class="captcha-input"
+              id="captchaInput"
+              placeholder="Ответ"
+            />
+          </div>
+          <button class="captcha-btn" id="captchaBtn">
+            ПОДТВЕРДИТЬ, СУКА!
+          </button>
+        </div>
+        <div class="confirmation-container hidden" id="confirmationContainer">
+          <div class="skull-icon"><i class="fas fa-skull"></i></div>
+          <div class="confirmation-text" id="confirmationText">
+            Ты готов к вопросу, Олег?
+          </div>
+          <div class="confirmation-btns" id="confirmationBtns">
+            <button class="yes-btn" id="confirmationYesBtn">ДА, ГОТОВ!</button>
+            <button class="no-btn" id="confirmationNoBtn">НЕТ</button>
+          </div>
+        </div>
+        <div class="final-message hidden" id="finalMessage">
+          <h2>ПОЗДРАВЛЯЮ, Олег!</h2>
+          <p>Ты прошел весь адский квест!</p>
+          <p>Твои подарки спиздили друзья!</p>
+          <p>С Днём Рождения, братишка! 🎉</p>
+        </div>
+      </div>
+      <div class="error-modal" id="errorModal">
+        <div class="error-content">
+          <div class="error-title">ОШИБКА, СУка!</div>
+          <div class="error-message" id="errorMessage">Ты че, дебил?</div>
+          <button class="error-btn" id="errorCloseBtn">ПОНЯЛ, СУка!</button>
+        </div>
+      </div>
+      <div class="success-modal" id="successModal">
+        <div class="success-content">
+          <div class="success-title">ПРАВИЛЬНО, СУка!</div>
+          <div class="success-message" id="successMessage">
+            Ты такой умный, что даже я в шоке!
+          </div>
+          <button class="success-btn" id="successCloseBtn">ДАЛЕЕ</button>
+        </div>
+      </div>
+      <footer><p>Создано специально для Олега • Дело №BD-666</p></footer>
+    </div>
+    <script>
+      const AUDIO_PATH = "audio/";
+      let audioElement = null;
+      function playAudio(filename) {
+        if (audioElement) {
+          audioElement.pause();
+          audioElement.remove();
+        }
+        audioElement = new Audio(AUDIO_PATH + filename);
+        audioElement.volume = 1.0;
+        audioIndicator.style.transform = "scaleX(0)";
+        setTimeout(() => {
+          audioIndicator.style.transform = "scaleX(1)";
+        }, 100);
+        audioElement.play().catch((e) => {
+          console.warn("Не удалось проиграть аудио:", filename, e);
+        });
+        audioElement.onended = () => {
+          audioIndicator.style.transform = "scaleX(0)";
+          audioElement = null;
+        };
+      }
+      document.addEventListener(
+        "touchstart",
+        () => {
+          if (!window.audioPreloaded) {
+            new Audio().load();
+            window.audioPreloaded = true;
+          }
+        },
+        { once: true }
+      );
+
+      // === ФУНКЦИЯ ПЕРЕМЕЩЕНИЯ КНОПКИ "НЕТ" ПО КЛИКУ ===
+      function moveNoBtnOnClick() {
+        const container = confirmationContainer;
+        const btn = confirmationNoBtn;
+        const containerRect = container.getBoundingClientRect();
+        const btnRect = btn.getBoundingClientRect();
+
+        const maxX = containerRect.width - btnRect.width;
+        const maxY = containerRect.height - btnRect.height;
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        btn.style.left = `${x}px`;
+        btn.style.top = `${y}px`;
+      }
+
+      const gameState = {
+        currentStep: 0,
+        captchaSolved: false,
+        confirmationStage: 0,
+        questions: [
+          {
+            text: "Что ты сказал Юле в камеру?",
+            answers: ["Ебать я красивый", "Я люблю Даню", "Пока", "Спасибо"],
+            correct: 0,
+            wrongMessages: [
+              "Ты сказал, что красивый, а не это!",
+              "Ты не говорил о любви в камере!",
+              "Куда сбежать надумал, сука? Все только начинается!",
+              "Спасибо скажи моему Папе!",
+            ],
+            correctMessage:
+              "Ха! Конечно, ты такой красивый, как никто другой, голубок! 💅",
+          },
+          {
+            text: "Что Даня не доделал у тебя на даче?",
+            answers: [
+              "Не прибрался",
+              "Не договорил",
+              "Не построил",
+              "Не покрасил",
+            ],
+            correct: 1,
+            wrongMessages: [
+              "Даня не убирался? Конечно нет, он не шестерка!",
+              "Да, он не закончил разговор, типичный Даня!",
+              "Строительство? Только если в майнкрафте!",
+              "Краска? Ты что гонишь?",
+            ],
+            correctMessage: "Вот это да! Он действительно не договорил! 🎤",
+          },
+          {
+            text: "Что ты порвал Ване?",
+            answers: ["Очко", "Футболку", "Душу", "Нервы"],
+            correct: 1,
+            wrongMessages: [
+              "Ты порвал ему не это... хотя...",
+              "Футболка! Это была его любимая вещь!",
+              "Душу? Мелодрамм пересмотрел?",
+              "Нервы? Это было с корзуном!",
+            ],
+            correctMessage: "Футболка! Ха-ха, теперь Ваня ходит голый! 😂",
+          },
+          {
+            text: "Где могут познакомиться 2 битмаря?",
+            answers: ["В качалке", "В школе", "В парке", "В интернете"],
+            correct: 0,
+            wrongMessages: [
+              "",
+              "Школа? Школа 21 если только!",
+              "Парк? Только для пивка на лавке!",
+              "Интернет? Ты что-то попутал!",
+            ],
+            correctMessage: "Конечно, в качалке! В колледже топ 1! 💪",
+          },
+          {
+            text: "Кто лучший мойщик туалетов? Особенно языком",
+            answers: ["Игроки на Фиоре", "Сантехники", "Уборщики", "Мамы"],
+            correct: 0,
+            wrongMessages: [
+              "",
+              "Сантехники? Они вообще сейчас в запое!",
+              "Уборщики? Ты что уже принял?",
+              "Мамы? Это слишком интимно!",
+            ],
+            correctMessage: "Фиора! Крутые пацаны! 🧼",
+          },
+          {
+            text: "Какой чужой фамилией Ксюша тебя называет?",
+            answers: ["Корзун", "Подольский", "Пивной", "Казанова"],
+            correct: 3,
+            wrongMessages: [
+              "Корзун? Блять хорош пихать везде его!",
+              "Подольский? Четкая фамилия, но тебе не повезло!",
+              "Пивной? Ты ж не бочка, ебаный брожник!",
+            ],
+            correctMessage: "Казанова! Но все равно месяц без секса! 😏🔥",
+          },
+          {
+            text: "Кто гей?",
+            answers: ["Максы", "Ваня", "Я", "Не даня"],
+            correct: 3,
+            wrongMessages: [
+              "Максы? Они без проникновения играют!",
+              "Ваня? Жестко на доте сидит, не подходит!",
+              "Ты? Да, а Ксюша для прикрытия?!",
+            ],
+            correctMessage: "Конечно, не Даня, мой сладкий! 🙃",
+          },
+          {
+            text: "Что будет если соединить Роналдо и Корзуна?",
+            answers: ["Корналдо", "Ронзуна", "Футбол", "Чморзун"],
+            correct: 3,
+            wrongMessages: [
+              "Корналдо? Ты уже под градусом чтоли?",
+              "Ронзуна? Блять, я сейчас язык сломаю!",
+              "Футбол? Ебанный рот, ты прикалываешься?",
+            ],
+            correctMessage: "Чморзун! Лучшее сочетание! 🦄",
+          },
+          {
+            text: "Какой диагноз тебе поставила 22 летняя Настя?",
+            answers: ["Наркоман", "Шизофрения", "Депрессия", "Алкоголик"],
+            correct: 3,
+            wrongMessages: [
+              "Наркоман? Ты же завязал с бензином!",
+              "Шизофрения? Бро ты с кем базаришь вообще, ты один в комнате!",
+              "Депрессия? БЛЯЯ, я сейчас сойду с ума!",
+            ],
+            correctMessage: "Алкоголик! Ты любишь бутылочки! 🍷",
+          },
+          {
+            text: "Что ты любишь больше всего?",
+            answers: ["Корзуна", "Доту", "Ягермейстер", "Подольск"],
+            correct: 3,
+            wrongMessages: [
+              "Корзуна? Это не любовь, это одержимость!",
+              "Дота? Это не любовь, ПОКА!",
+              "Ягермейстер? Это не любовь, Ты точно накуренный!",
+            ],
+            correctMessage: "Подольск! Твоя любовь! ❤️",
+          },
+          {
+            text: "Что ты тогда выбросил?",
+            answers: ["Водку", "Сигареты", "Еду", "Пиво"],
+            correct: 3,
+            wrongMessages: [
+              "Водка? Ты её выпил!",
+              "Сигареты? Ты же ими закусываешь!",
+              "Еда? Фу Олег, опять за старое!",
+            ],
+            correctMessage: "Пиво! Как ты посмел вообще?! 🍺",
+          },
+          {
+            text: "Что ты сказал Федуловой Насте, когда она спросила 'Ты кто?'?",
+            answers: ["Здравствуйте", "Пока", "Привет", "Иди нахуй"],
+            correct: 3,
+            wrongMessages: [
+              "Здравствуйте? Ты так грубо!",
+              "Пока? Опять сбежать думаешь?!",
+              "Привет? Минет, сука!",
+            ],
+            correctMessage: "Иди нахуй! Ну ты даешь Олег! 🖕",
+          },
+        ],
+        confirmationTexts: [
+          "Ты готов к вопросу, Олег?",
+          "Точно готов, детектив сука?",
+          "Да ну нахуй! Уверен дохуя в себе?",
+          "Не ссышь? Сосал?",
+          "ТЫ ГЕЙ?",
+        ],
+      };
+      const questionText = document.getElementById("questionText");
+      const answersContainer = document.getElementById("answersContainer");
+      const captchaSection = document.getElementById("captchaSection");
+      const captchaPuzzle = document.getElementById("captchaPuzzle");
+      const captchaInput = document.getElementById("captchaInput");
+      const captchaBtn = document.getElementById("captchaBtn");
+      const confirmationContainer = document.getElementById(
+        "confirmationContainer"
+      );
+      const confirmationText = document.getElementById("confirmationText");
+      const confirmationYesBtn = document.getElementById("confirmationYesBtn");
+      const confirmationNoBtn = document.getElementById("confirmationNoBtn");
+      const confirmationBtns = document.getElementById("confirmationBtns");
+      const progressFill = document.getElementById("progressFill");
+      const voiceBtn = document.getElementById("voiceBtn");
+      const audioIndicator = document.getElementById("audioIndicator");
+      const finalMessage = document.getElementById("finalMessage");
+      const bloodSplatter = document.getElementById("bloodSplatter");
+      const errorModal = document.getElementById("errorModal");
+      const errorMessage = document.getElementById("errorMessage");
+      const errorCloseBtn = document.getElementById("errorCloseBtn");
+      const successModal = document.getElementById("successModal");
+      const successMessage = document.getElementById("successMessage");
+      const successCloseBtn = document.getElementById("successCloseBtn");
+
+      function initGame() {
+        showStartModal();
+        createBloodSplatter();
+        updateProgress();
+      }
+
+      function showStartModal() {
+        const startModal = document.createElement("div");
+        startModal.className = "error-modal active";
+        startModal.id = "startModal";
+        startModal.innerHTML = `
+                <div class="error-content">
+                    <div class="error-title">ПРИВЕТ, ОЛЕГ!</div>
+                    <div class="error-message" id="startMessage">Твои подарки украли! Пройди квест, чтобы их вернуть!</div>
+                    <button class="error-btn" id="startBtn">ПОГНАЛИ!</button>
+                </div>
+            `;
+        document.body.appendChild(startModal);
+        playAudio("intro.mp3");
+        document.getElementById("startBtn").addEventListener("click", () => {
+          startModal.remove();
+          showCaptcha();
+        });
+      }
+
+      function createBloodSplatter() {
+        bloodSplatter.innerHTML = "";
+        for (let i = 0; i < 60; i++) {
+          const drop = document.createElement("div");
+          drop.className = "blood-drop";
+          drop.style.left = `${Math.random() * 100}%`;
+          drop.style.top = `${Math.random() * 100}%`;
+          drop.style.opacity = Math.random() * 0.35;
+          drop.style.width = `${Math.random() * 35 + 12}px`;
+          drop.style.height = drop.style.width;
+          bloodSplatter.appendChild(drop);
+        }
+      }
+
+      function updateProgress() {
+        const totalSteps = gameState.questions.length + 2;
+        let progress = 0;
+        if (!gameState.captchaSolved) progress = 0;
+        else if (gameState.currentStep < gameState.questions.length)
+          progress = ((gameState.currentStep + 1) / totalSteps) * 100;
+        else if (
+          gameState.confirmationStage < gameState.confirmationTexts.length
+        )
+          progress =
+            ((gameState.questions.length + 1 + gameState.confirmationStage) /
+              totalSteps) *
+            100;
+        else progress = 100;
+        progressFill.style.width = `${progress}%`;
+      }
+
+      function showCaptcha() {
+        const num1 = Math.floor(Math.random() * 15) + 5;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        const operation = Math.random() > 0.5 ? "+" : "-";
+        let answer;
+        if (operation === "+") {
+          answer = num1 + num2;
+          captchaPuzzle.innerHTML = `${num1} ${operation} ${num2} = ?`;
+        } else {
+          answer = num1 - num2;
+          if (answer < 0) {
+            answer = num2 - num1;
+            captchaPuzzle.innerHTML = `${num2} ${operation} ${num1} = ?`;
+          } else {
+            captchaPuzzle.innerHTML = `${num1} ${operation} ${num2} = ?`;
+          }
+        }
+        captchaSection.dataset.answer = answer;
+        captchaSection.classList.remove("hidden");
+        answersContainer.classList.add("hidden");
+        confirmationContainer.classList.add("hidden");
+        finalMessage.classList.add("hidden");
+        questionText.classList.add("hidden");
+        questionText.classList.remove("typing");
+        questionText.innerHTML =
+          '<span class="typing">Докажи, что ты не робот, ебать! Реши эту хуеву задачу!</span>';
+        playAudio("captcha_intro.mp3");
+        setTimeout(() => {
+          captchaInput.value = "";
+          captchaInput.focus();
+        }, 100);
+      }
+
+      captchaBtn.addEventListener("click", () => {
+        const userAnswer = parseInt(captchaInput.value);
+        const correctAnswer = parseInt(captchaSection.dataset.answer);
+        if (userAnswer === correctAnswer) {
+          playAudio("captcha_success.mp3");
+          successMessage.textContent =
+            "Капча решена! Теперь угадай 12 загадок!";
+          successModal.classList.add("active");
+          successCloseBtn.onclick = () => {
+            successModal.classList.remove("active");
+            gameState.captchaSolved = true;
+            gameState.currentStep = 0;
+            showQuestion();
+            createBloodEffect();
+          };
+        } else {
+          captchaInput.value = "";
+          captchaInput.placeholder = "ОШИБКА, СУКА! ПОПРОБУЙ СНОВА!";
+          captchaInput.focus();
+          showErrorMessage("Ты че, дебил? Реши нормально, уебок!");
+          createBloodEffect();
+        }
+      });
+
+      captchaInput.addEventListener("keyup", (e) => {
+        if (e.key === "Enter") captchaBtn.click();
+      });
+
+      function showQuestion() {
+        if (gameState.currentStep >= gameState.questions.length) {
+          showConfirmation();
+          return;
+        }
+        const q = gameState.questions[gameState.currentStep];
+        questionText.classList.remove("typing");
+        questionText.innerHTML = q.text;
+        answersContainer.innerHTML = "";
+        q.answers.forEach((ans, i) => {
+          const btn = document.createElement("button");
+          btn.className = "answer-btn";
+          btn.textContent = ans;
+          btn.onclick = () => handleAnswerClick(i);
+          answersContainer.appendChild(btn);
+        });
+        captchaSection.classList.add("hidden");
+        answersContainer.classList.remove("hidden");
+        confirmationContainer.classList.add("hidden");
+        finalMessage.classList.add("hidden");
+        questionText.classList.remove("hidden");
+        updateProgress();
+        setTimeout(() => {
+          playAudio(`q${gameState.currentStep + 1}_text.mp3`);
+        }, 500);
+      }
+
+      function handleAnswerClick(idx) {
+        const q = gameState.questions[gameState.currentStep];
+        if (idx === q.correct) {
+          playAudio(`q${gameState.currentStep + 1}_correct.mp3`);
+          successMessage.textContent = q.correctMessage;
+          successModal.classList.add("active");
+          successCloseBtn.onclick = () => {
+            successModal.classList.remove("active");
+            gameState.currentStep++;
+            updateProgress();
+            if (gameState.currentStep >= gameState.questions.length)
+              showConfirmation();
+            else {
+              showQuestion();
+              createBloodEffect();
+            }
+          };
+        } else {
+          const msg = q.wrongMessages[idx] || "Неправильно!";
+          playAudio(`q${gameState.currentStep + 1}_wrong_${idx}.mp3`);
+          showErrorMessage(msg);
+          createBloodEffect();
+          answersContainer.classList.add("shake");
+          setTimeout(() => answersContainer.classList.remove("shake"), 800);
+        }
+      }
+
+      function showErrorMessage(msg) {
+        errorMessage.textContent = msg;
+        errorModal.classList.add("active");
+      }
+
+      function showConfirmation() {
+        confirmationContainer.classList.remove("hidden");
+        answersContainer.classList.add("hidden");
+        captchaSection.classList.add("hidden");
+        finalMessage.classList.add("hidden");
+        questionText.classList.add("hidden");
+        confirmationText.innerHTML = gameState.confirmationTexts[0];
+        confirmationYesBtn.textContent = "ДА, ГОТОВ!";
+        confirmationNoBtn.style.opacity = "0";
+        confirmationNoBtn.style.pointerEvents = "none";
+        playAudio("conf_0.mp3");
+        updateProgress();
+      }
+
+      // ЕДИНСТВЕННЫЙ ОБРАБОТЧИК КНОПКИ "ДА"
+      confirmationYesBtn.addEventListener("click", () => {
+        gameState.confirmationStage++;
+        updateProgress();
+        if (
+          gameState.confirmationStage <
+          gameState.confirmationTexts.length - 1
+        ) {
+          confirmationText.innerHTML =
+            gameState.confirmationTexts[gameState.confirmationStage];
+          confirmationYesBtn.textContent = "ДА, ГОТОВ!";
+          confirmationNoBtn.style.opacity = "0";
+          confirmationNoBtn.style.pointerEvents = "none";
+          playAudio(`conf_${gameState.confirmationStage}.mp3`);
+        } else if (
+          gameState.confirmationStage ===
+          gameState.confirmationTexts.length - 1
+        ) {
+          // Последний шаг: "ТЫ ГЕЙ?"
+          confirmationText.innerHTML = "ТЫ ГЕЙ?";
+          confirmationYesBtn.textContent = "ДА";
+          confirmationNoBtn.textContent = "НЕТ";
+
+          // Делаем кнопку "Нет" видимой и кликабельной
+          confirmationNoBtn.style.position = "absolute";
+          confirmationNoBtn.style.opacity = "1";
+          confirmationNoBtn.style.pointerEvents = "auto";
+          confirmationNoBtn.style.zIndex = "10";
+
+          // Располагаем "НЕТ" справа от "ДА"
+          const containerRect = confirmationBtns.getBoundingClientRect();
+          const yesRect = confirmationYesBtn.getBoundingClientRect();
+          const noWidth = confirmationNoBtn.offsetWidth;
+
+          let left = yesRect.right - containerRect.left + 20;
+          if (left + noWidth > containerRect.width) {
+            left = containerRect.width - noWidth - 10;
+          }
+
+          confirmationNoBtn.style.left = `${left}px`;
+          confirmationNoBtn.style.top = `${yesRect.top - containerRect.top}px`;
+
+          // Убираем старые обработчики и вешаем один — на click
+          confirmationNoBtn.removeEventListener("click", moveNoBtnOnClick);
+          confirmationNoBtn.addEventListener("click", moveNoBtnOnClick);
+
+          playAudio("conf_4.mp3");
+        } else {
+          showFinalMessage();
+        }
+      });
+
+      function showFinalMessage() {
+        finalMessage.classList.remove("hidden");
+        confirmationContainer.classList.add("hidden");
+        questionText.classList.add("hidden");
+        progressFill.parentElement.style.display = "none";
+        voiceBtn.style.display = "none";
+        updateProgress();
+        playAudio("final.mp3");
+      }
+
+      function createBloodEffect() {
+        for (let i = 0; i < 20; i++) {
+          const drop = document.createElement("div");
+          drop.className = "blood-drop";
+          const containerRect = document
+            .querySelector(".container")
+            .getBoundingClientRect();
+          drop.style.cssText = `
+                    position: absolute;
+                    z-index: 1000;
+                    pointer-events: none;
+                    left: ${Math.random() * containerRect.width}px;
+                    top: ${Math.random() * containerRect.height}px;
+                    width: ${Math.random() * 20 + 10}px;
+                    height: ${Math.random() * 20 + 10}px;
+                    background: ${getComputedStyle(
+                      document.body
+                    ).getPropertyValue("--blood")};
+                    border-radius: 50%;
+                    opacity: 1;
+                    animation: fall ${
+                      Math.random() * 2 + 1.5
+                    }s ease-out forwards;
+                `;
+          document.querySelector(".container").appendChild(drop);
+          setTimeout(() => drop.remove(), 3500);
+        }
+        if (!document.getElementById("fall-animation")) {
+          const style = document.createElement("style");
+          style.id = "fall-animation";
+          style.textContent = `@keyframes fall { to { transform: translateY(100px) rotate(${
+            Math.random() * 360
+          }deg); opacity: 0; } }`;
+          document.head.appendChild(style);
+        }
+      }
+
+      voiceBtn.addEventListener("click", () => {
+        if (finalMessage.classList.contains("hidden")) {
+          if (!captchaSection.classList.contains("hidden")) {
+            playAudio("captcha_intro.mp3");
+          } else if (!confirmationContainer.classList.contains("hidden")) {
+            const idx = Math.min(gameState.confirmationStage, 4);
+            playAudio(`conf_${idx}.mp3`);
+          } else {
+            playAudio(`q${gameState.currentStep + 1}_text.mp3`);
+          }
+        } else {
+          playAudio("final.mp3");
+        }
+      });
+
+      errorCloseBtn.addEventListener("click", () => {
+        errorModal.classList.remove("active");
+      });
+
+      window.addEventListener("load", () => {
+        setTimeout(initGame, 500);
+      });
+    </script>
+  </body>
+</html>
